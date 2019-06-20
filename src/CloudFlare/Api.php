@@ -223,6 +223,7 @@ class Api
 
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_SSLVERSION, 6);
 
         $http_result = curl_exec($ch);
         $error = curl_error($ch);
